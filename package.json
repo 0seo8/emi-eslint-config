@@ -1,0 +1,29 @@
+{
+  "name": "@youngseo/configs",
+  "version": "0.0.0",
+  "description": "youngseo's eslint-configs",
+  "packageManager": "yarn@4.1.1",
+  "dependencies": {
+    "@changesets/cli": "^2.27.1",
+    "ultra-runner": "^3.10.5"
+  },
+  "scripts": {
+    "build": "ultra -r build",
+    "release": "yarn changeset publish",
+    "version": "changeset version && yarn install --no-immutable"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.25.2",
+    "eslint": "^8.29.0",
+    "prettier": "^3.2.5",
+    "ultra-runner": "^3.10.5"
+  },
+  "ultra": {
+    "concurrent": [
+      "build"
+    ]
+  },
+  "workspaces": [
+    "./packages/eslint"
+  ]
+}
