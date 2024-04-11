@@ -1,1 +1,1 @@
-# eslint-config-emi
+# emi-eslint-config
